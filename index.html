@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        table,
+        td {
+            border: 1px solid #333;
+        }
+
+        thead,
+        tfoot {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<html>
+    <body>
+       <div>
+           x(用,隔開)
+           <input type="text" class="x"></div></br>
+           y(用,隔開)
+           <input type="text" class="y"> </br>
+           <input type="button" class="send" value="計算">
+       </div>
+    </br>
+    </br>
+    </br>
+       <table class="list">
+      </table>
+      <div class="info">
+      </div>
+      <script>
+          var n2=document.querySelector('.send')
+            var list=document.querySelector('.list')
+            var info=document.querySelector('.info')
+            n2.addEventListener('click',calc,false)
+            function calc(){
+            var str=''
+            var x=document.querySelector('.x').value
+            var x1=x.split(',')
+            var y=document.querySelector('.y').value
+            var y1=y.split(',')
+            var xy=[]
+            var xx=[]
+            var n=x1.length
+            str+='<tr><th>x</th><th>y</th><th>x*y</th><th>x*x</th></tr>'
+
+            var sigmax=0;
+            for(var i=0;i<x1.length;i++){
+                sigmax+=Math.round(parseFloat(x1[i])*10000)
+            }
+            sigmax/=10000
+
+            var sigmay=0;
+            for(var i=0;i<x1.length;i++){
+                sigmay+=Math.round(parseFloat(y1[i])*10000)
+            }
+            sigmay/=10000
+
+            var sigmaxy =0;
+            for(var i=0;i<y1.length;i++){
+                xdy=Math.round(x1[i]*y1[i]*10000)
+                xdy=xdy/10000
+                xy.push(xdy)
+                sigmaxy+=Math.round(x1[i]*y1[i]*10000)
+            }
+            sigmaxy/=10000
+
+            var sigmax2=0;
+            for(var i=0;i<y1.length;i++){
+                x2=Math.round(x1[i]*x1[i]*10000)
+                x2=x2/10000
+                xx.push(x2)
+                sigmax2+=Math.round(x1[i]*x1[i]*10000)
+            }
+            sigmax2=sigmax2/10000
+
+            var mtop=(n*sigmaxy)-(sigmax*sigmay)
+            var mdown=n*(sigmax2)-(sigmax*sigmax)
+            var m=Math.round(mtop/mdown*10000);
+            m/=10000
+
+            var b=Math.round((sigmay/n-m*(sigmax/n))*10000);
+            b/=10000;
+
+            var ycap=m+'x+'+b
+
+            var lii='';
+            for (i=0;i<n;i++){
+                lii+='<tr><td>'+x1[i]+'</td><td>'+y1[i]+'</td><td>'+xy[i]+'</td><td>'+xx[i]+'</td></tr>'
+                console.log(lii)
+                str+=lii
+                lii='';
+            }
+
+            list.innerHTML=str
+            str='';
+            str+='<br>sigmax:'+sigmax+'</br>'
+            str+='<br>sigmay:'+sigmay+'</br>'
+            str+='<br>sigmaxy:'+sigmaxy+'</br>'
+            str+='<br>sigmaxx:'+sigmax2+'</br>'
+            str+='<br>m:'+m+'</br>'
+            str+='<br>b:'+b+'</br>'
+            str+='<br>ycap:'+ycap+'</br>'
+            info.innerHTML=str
+        }
+        </script>
+
+    </body>
+</html>
