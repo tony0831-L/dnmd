@@ -18,7 +18,7 @@
 </head>
 <html>
     <body>
-        <div class="title">9.2</div>
+        <div class="title">9.2(含r2計算)</div>
        <div>
            x(用,隔開)
            <input type="text" class="x"></br>
@@ -34,16 +34,34 @@
       <div class="title">9.3</div>
       <div>
           yacap=mx+b
-      </b>
-          m
-          <input type="text" class="mval">  
+        </br>
+        m
+          <input type="text" class="mval"> 
+        </br> 
+        b
+        <input type="text" class="bval"> 
+        <br>
+        x(用,隔開)
+        <input type="text" class="xval"></br>
+        y(用,隔開)
+        <input type="text" class="yval"></br>
+        <input type="button" class="sendmb" value="計算">
+        <table class="list2">
+        </table>
+        <div class="info2">
+        </div>
       </div>
+      <div class="title"><a href="https://www.socscistatistics.com/tests/multipleregression/default.aspx">9.4(點擊跳轉外部)</a></div>
       <script>
           var n2=document.querySelector('.send')
+          var n3=document.querySelector('.sendmb')
             var list=document.querySelector('.list')
+            var list2=document.querySelector('.list2')
             var info=document.querySelector('.info')
+            var info2=document.querySelector('.info2')
             n2.addEventListener('click',calc,false)
-            function calc(){
+            n3.addEventListener('click',calc2,false)
+        function calc(){
             var str=''
             var x=document.querySelector('.x').value
             var x1=x.split(',')
@@ -131,6 +149,87 @@
             str+='<br>ycap:'+ycap+'</br>'
             str+='<br>r2:'+r2+'</br>'
             info.innerHTML=str
+        }
+
+        function calc2(){
+            var str=''
+            var m=document.querySelector('.mval').value
+            var b=document.querySelector('.bval').value
+            var x=document.querySelector('.xval').value
+            var x1=x.split(',')
+            var y=document.querySelector('.yval').value
+            var y1=y.split(',')
+            var yicap=[];
+            var yideyicap=[];
+            var yideyicap2=[];
+            var sigmay=0;
+            var tva=0;
+            str+='<tr><th>x</th><th>y</th><th>ycap</th><th>y-ycap</th><th>(y-ycap)2</th></tr>'
+            for(var i=0;i<y1.length;i++){
+                sigmay+=parseFloat(y1[i])
+            }
+            var yhat=sigmay/y1.length
+            yhat=Math.round(yhat*10000)
+            yhat/=10000
+            console.log("yhat:"+yhat)
+
+            for(var i=0;i<y1.length;i++){
+                tva1=(parseFloat(y1[i])-yhat)
+                tva1 =tva1*tva1
+                tva+=tva1
+            }
+            tva=Math.round(tva*10000)
+            tva/=10000
+            console.log("tva:"+tva)
+            for(var i=0;i<x1.length;i++){
+                var yic=(m*x1[i])+parseFloat(b)
+                yic=Math.round(yic*10000)
+                yic/=10000
+                yicap.push(yic)
+            }
+            for(var i=0;i<x1.length;i++){
+                var ydy=parseFloat(y1[i])-parseFloat(yicap[i])
+                ydy=Math.round(ydy*10000)
+                ydy/=10000
+                yideyicap.push(ydy)
+            }
+            var unev=0;
+            for(var i=0;i<x1.length;i++){
+                var ydy2=yideyicap[i]*yideyicap[i]
+                ydy2=Math.round(ydy2*10000)
+                ydy2/=10000
+                yideyicap2.push(ydy2)
+                unev+=ydy2;
+            }
+            unev=Math.round(unev*10000)
+            unev/=10000
+
+            var ev=tva-unev;
+            var r2=Math.round((ev/tva)*10000)
+            r2/=10000
+
+            var lii='';
+            for (i=0;i<x1.length;i++){
+                lii+='<tr><td>'+x1[i]+'</td><td>'+y1[i]+'</td><td>'+yicap[i]+'</td><td>'+yideyicap[i]+'</td><td>'+yideyicap2[i]+'</td></tr>'
+                console.log(lii)
+                str+=lii
+                lii='';
+            }
+
+            var se2=unev/(x1.length-2)
+            se2=Math.sqrt(se2)
+            se2=Math.round(se2*10000)
+            se2/=10000
+
+            list2.innerHTML=str
+            var info22=''
+            info22+='<br>r2:'+r2+'</br>'
+            info22+='<br>可解釋變異:'+ev+'</br>'
+            info22+='<br>不可解釋變異:'+unev+'</br>'
+            info22+='<br>總變異:'+tva+'</br>'
+            info22+='<br>yhat:'+yhat+'</br>'
+            info22+='<br>Se:'+se2+'</br>'
+            info2.innerHTML=info22
         }
         </script>
 
