@@ -31,6 +31,13 @@
       </table>
       <div class="info">
       </div>
+      <div class="title">9.3</div>
+      <div>
+          yacap=mx+b
+      </b>
+          m
+          <input type="text" class="mval">  
+      </div>
       <script>
           var n2=document.querySelector('.send')
             var list=document.querySelector('.list')
@@ -97,7 +104,9 @@
             var ycap=m+'x+'+b
 
             var rtop=(n*sigmaxy)-(sigmax*sigmay)
-            var rdown=(Math.sqrt((n*sigmax2)-sigmax2)*(Math.sqrt((n*sigmay2)-(sigmay*sigmay))))
+            console.log(rtop)
+            var rdown=(Math.sqrt((n*sigmax2)-(sigmax*sigmax))*(Math.sqrt((n*sigmay2)-(sigmay*sigmay))))
+            console.log(rdown)
             var r=rtop/rdown
             var r2=Math.round(r*r*10000)
             r2=r2/10000
