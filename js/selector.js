@@ -6,7 +6,7 @@ function updata(e){
     select1=Math.round(select)
     if(select1==9 && select!=9.4){
         window.location.href='./htmls/ch9.html'
-    }else if(select1==10){
+    }else if(select==10.1){
         window.location.href='./htmls/ch10.html'
     }else if(select==9.4){
         window.location.href='https://www.socscistatistics.com/tests/multipleregression/default.aspx'

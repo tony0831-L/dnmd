@@ -85,11 +85,11 @@ function calc(){
 
   list.innerHTML=str
   str='';
-  str+='<br>sigmax:'+sigmax+'</br>'
-  str+='<br>sigmay:'+sigmay+'</br>'
-  str+='<br>sigmaxy:'+sigmaxy+'</br>'
-  str+='<br>sigmaxx:'+sigmax2+'</br>'
-  str+='<br>sigmayy:'+sigmay2+'</br>'
+  str+='<br>Σx:'+sigmax+'</br>'
+  str+='<br>Σy:'+sigmay+'</br>'
+  str+='<br>Σx*y:'+sigmaxy+'</br>'
+  str+='<br>Σx*x:'+sigmax2+'</br>'
+  str+='<br>Σy*y:'+sigmay2+'</br>'
   str+='<br>m:'+m+'</br>'
   str+='<br>b:'+b+'</br>'
   str+='<br>ycap:'+ycap+'</br>'
