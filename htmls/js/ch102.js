@@ -1,3 +1,6 @@
+window.onresize = function(){
+    document.querySelector('.banner').style.width = window.innerWidth+"px"
+ }
  var send=document.querySelector('.send')
  var list=document.querySelector('.list')
  var info=document.querySelector('.info')
