@@ -1,14 +1,25 @@
-        td {
-            border: 1px solid #333;
+        body{
+            background-color: gray;
+            font-size: 50px;
         }
-
+        td {
+            border: 20px solid #fff;
+            background-color: #fff;
+        }
+        th{
+            background-color: #fff;
+        }
         thead,
+        table{
+            border-radius: 3px;
+            text-align: center;
+        }
         tfoot {
             background-color: #333;
             color: #fff;
         }
         .title{
-            font-size: 28px;
+            font-size: 60px;
         }
         #back{
             position: fixed;  
@@ -29,4 +40,37 @@
         
             -webkit-border-radius: 10px;
         
+        }
+        .send{
+            font-size: 40px;
+            margin-top: 2%;
+            margin-bottom: 2%
+        }
+        .sendmb{
+            font-size: 40px;
+            margin-top: 2%;
+            margin-bottom: 2%
+        }
+        input{
+            font-size: 70%;
+            background: rgba(255,255,255,0.70);
+            border: 3px solid #FFFFFF;
+            border-radius: 3px;
+        }
+        .banner{
+            background-color:black;
+            width: 100%;
+            text-align: center;
+        }
+        .info{
+            font-size: 55px;
+            color: #fff;
+            margin-bottom: 3%;
+            font-weight: bold;
+        }
+        .info2{
+            font-size: 55px;
+            color: #fff;
+            margin-bottom: 3%;
+            font-weight: bold;
         }
