@@ -13,4 +13,7 @@ function updata(e){
     }else if(select==10.2){
         window.location.href='./htmls/ch102.html'
     }
+    else if(select==10.3){
+        window.location.href='./htmls/ch103.html'
+    }
 }
