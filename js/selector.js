@@ -16,4 +16,7 @@ function updata(e){
     else if(select=='分配表'){
         window.location.href='./htmls/ch103.html'
     }
+    else if(select=='自數計算機'){
+        window.location.href='./htmls/wcal.html'
+    }
 }
