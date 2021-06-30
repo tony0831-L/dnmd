@@ -1,5 +1,3 @@
-
-var n2=document.querySelector('.send')
 var n3=document.querySelector('.sendmb')
   var list=document.querySelector('.list')
   var list2=document.querySelector('.list2')
@@ -24,7 +22,7 @@ function calc(){
       sigmax+=Math.round(parseFloat(x1[i])*10000)
   }
   sigmax/=10000
-
+var n2=document.querySelector('.send')
   var sigmay=0;
   for(var i=0;i<x1.length;i++){
       sigmay+=Math.round(parseFloat(y1[i])*10000)
