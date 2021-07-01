@@ -66,7 +66,7 @@ function test4(e){
 function test5(e){
     let name=e.target.parentNode.id
     console.log("name:"+name)
-    if(name=="2"){
+    if(name=="1"){
         window.location.href="./index.html"
     }
 }
