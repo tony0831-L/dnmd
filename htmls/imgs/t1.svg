@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="898.333" height="237.5" viewBox="0 0 898.333 237.5">
+  <defs>
+    <filter id="减去_2" x="0" y="0" width="898.333" height="237.5" filterUnits="userSpaceOnUse">
+      <feOffset dx="15" dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#减去_2)">
+    <path id="减去_2-2" data-name="减去 2" d="M875.334-908.5H180a78.507,78.507,0,0,1-30.75-6.208,79.008,79.008,0,0,1-13.419-7.284,79.624,79.624,0,0,1-11.692-9.647,79.611,79.611,0,0,1-9.647-11.692,79.08,79.08,0,0,1-7.284-13.419A78.51,78.51,0,0,1,101-987.5v-113H840.166v-.5H954.333v113.5a78.51,78.51,0,0,1-6.208,30.751,78.951,78.951,0,0,1-7.284,13.419,79.544,79.544,0,0,1-9.646,11.692,79.634,79.634,0,0,1-11.692,9.647,79.071,79.071,0,0,1-13.419,7.284A78.5,78.5,0,0,1,875.334-908.5Z" transform="translate(-93.5 1108.5)" fill="#fff"/>
+  </g>
+</svg>

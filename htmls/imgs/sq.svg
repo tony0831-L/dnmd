@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <filter id="矩形_30" x="0" y="0" width="20" height="20" filterUnits="userSpaceOnUse">
+      <feOffset dx="8" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g data-type="innerShadowGroup">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#矩形_30)">
+      <rect id="矩形_30-2" data-name="矩形 30" width="20" height="20" fill="#fff"/>
+    </g>
+    <g id="矩形_30-3" data-name="矩形 30" fill="none" stroke="#fff" stroke-width="14">
+      <rect width="20" height="20" stroke="none"/>
+      <rect x="7" y="7" width="6" height="6" fill="none"/>
+    </g>
+  </g>
+</svg>
