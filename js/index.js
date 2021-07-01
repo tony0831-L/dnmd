@@ -66,12 +66,12 @@ function test4(e){
 function test5(e){
     let name=e.target.parentNode.id
     switch (name){
-        case 1:
+        case '1':
             break;
-        case 2:
+        case '2':
             window.location.href='./htmls/math.html'
             break;
-        case 3:
+        case '3':
             break;
     }
 
