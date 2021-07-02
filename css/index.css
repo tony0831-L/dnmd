@@ -24,6 +24,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
+    width: 100%;
     line-height: 1;
 }
 ol, ul {
@@ -46,20 +47,35 @@ table {
   color: #faeefb;
 }
 
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 175px;
+}
+
+.nm{
+  width: 900px;
+  height: 194px;
+  margin-left: 506px;
+
+}
 .banner{
   margin-top: -128px;
-  width: 1920px;
-  height: 1080px; 
-  background-image: url('../htmls/imgs/b1.svg');
-  background-repeat: no-repeat;
-  
+  width: 100%;
+  max-width: 1920px;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat; 
+  background-image: url('../htmls/imgs/banner1.png');
 }
 .header{
   position: fixed;
   top: 0px;
   align-items: center;
   display: flex;
-  width: 1920px;
+  width: 100%;
   height: 89px;
   box-shadow: 0 15px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #5a5757;
@@ -89,12 +105,15 @@ table {
   color: #ffffff;
   cursor: pointer; 
 }
+.logot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .titleu{
   padding-top: 328px;
-  margin-left: 545px;
   display: flex;
-  width: 828px;
-  height: 123px;
   font-family: Source Han Sans TW;
   font-size: 80px;
   font-weight: normal;
@@ -113,9 +132,12 @@ table {
   color: #8b6f8b;
 }
 .logo{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-image: url('../htmls/imgs/nm1.svg');
   width: 900px;
   height: 167px;
-  margin-left: 506px;
   animation: fadein2 2s ease;
 }
 .logoa{
@@ -153,9 +175,6 @@ table {
 }
 .titled{
   margin-top: 18px;
-  margin-left: 694px;
-  width: 600px;
-  height: 123px;
   font-family: Source Han Sans TW;
   display: flex;
   font-size: 80px;
@@ -168,25 +187,23 @@ table {
   color: #ffffff;
   animation: fadein3 3s ease;
 }
-.title5{
-  font-size: 80px;
-}
+
 .title6{
   color: #ffffff;
-  font-size: 80px;
 }
 .title7{
   color: #8b6f8b;
-  font-size: 80px;
 }
 .textcontent{
-  width: 1920px;
-  height: 1360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 87.6px;
+  width: 100%;
   background-image: linear-gradient(#A3A1A1, #fdfbfb);
 }
 .test{
-  margin-top:-193px;
-  margin-left: 550.5px;
+  margin-left: 22px;
   width: 853.33px;
   height: 192.5px;
   box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.16);
@@ -207,21 +224,51 @@ table {
   font-size: 60px;
 }
 .bar1{
-  padding-top: 87.6px;
-  margin-left: 456.8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-image: url('../htmls/imgs/bar1.svg');
+  height: 192.5px;
+  width: 10px;
 }
 .bar2{
-  margin-top: 175px;
-  margin-left: 456.8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-image: url('../htmls/imgs/bar2.svg');
+  height: 192.5px;
+  width: 10px;
 }
 .bar3{
-  margin-top: 175px;
-  margin-left: 456.8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-image: url('../htmls/imgs/bar3.svg');
+  height: 192.5px;
+  width: 10px;
 }
 .bar4{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-image: url('../htmls/imgs/bar4.svg');
   margin-left: 24.7px;
+  width: 750px;
+  height: 18.5px;
+}
+.bar5{
+  width: 1742px;
+  height: 41px;
+  background-repeat: no-repeat; 
+  background-image: url('../htmls/imgs/bar5.svg');
+  margin-left: 94px;
 }
 .bar6{
+  background-position: bottom;
+  width: 1733px;
+  height: 30px;
+  background-repeat: no-repeat; 
+  background-image: url('../htmls/imgs/bar5.svg');
   padding-top:181px;
   margin-left: 94px;
 }
@@ -241,33 +288,37 @@ table {
   
 }
 .logo1{
+  background-image: url('../htmls/imgs/test.svg');
+    width: 175px;
+    height: 58px;
     margin-left: 750.3px;
     margin-top: -65.9px;
     cursor: pointer; 
 }
 .calc{
-  height: 122px;
-  width: 97px;
+  background-image: url('../htmls/imgs/calc.svg');
+  width: 79px;
+  height: 104px;
   margin-left: 791.3px;
   margin-top: -65.9px;
   cursor: pointer; 
 }
 .word{
+  background-image: url('../htmls/imgs/word.svg');
+  width: 156px;
+  height: 134px;
   margin-left: 775.3px;
   margin-top: -65.9px;
   cursor: pointer; 
 }
 .about{
-  width: 1920px;
+  width: 100%;
   height: 1039px;
   display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.bar5{
-  margin-left: 94px;
-}
 .logon {
   width: 720px;
   height: 146px;
@@ -296,16 +347,44 @@ table {
   margin-top: -75px;
 }
 .footer{
-  width: 1920px;
-  height: 288px;
+  display: flex;
+  width: 100%;
+  height: 1.5%;
+  box-shadow: 0 15px 6px 0 rgb(0 0 0 / 16%);
+  background-color: #5a5757;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.copyright{
+  font-family: SourceHanSansTW;
+  font-size: 65px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333333;
+}
+.contentf{
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 23px;
+}
+.contentf2{
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
 }
 .switch{
-  position: relative;
-  top:156.6px;
-  left: 1322px;
   width: 160px;
   height: 54.7px;
-  margin: 84px 0 0;
   border-radius: 9px;
   border: solid 3px var(--warm-grey);
   background-color: #707070;
@@ -322,7 +401,38 @@ table {
   justify-content: center;
   cursor: pointer; 
 }
+.mail{
+  background-image: url('../htmls/imgs/mail1.svg');
+  width: 76.47px;
+  height: 50.18px;
+  opacity: 0.7;
+  font-family: SourceHanSansTW;
+  font-size: 40px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333333;
+}
+.maill {
+  opacity: 0.7;
+  font-family: SourceHanSansTW;
+  font-size: 40px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333333;
+}
 .logou{
+  margin-top: 141px;
+  width: 548px;
+  height: 37px;
+  background-image: url('../htmls/imgs/about.svg');
   padding-top: 140px;
 }
 .footer2{
@@ -330,7 +440,202 @@ table {
   width: 1920px;
   height: 288px;
 }
+.menu{
+  background-image: url('../htmls/imgs/menu.svg');
+  margin-left: 14px;
+  margin-right: 293px;
+  width: 69px;
+  height: 33px;
+}
 
+@media screen and (max-width: 480px) {
+  .banner{
+    background-image: url('../htmls/imgs/nm5.svg');
+    height: 350px;
+    margin-top: -56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header{
+    height: 21px;
+  }
+  .header .title{
+    font-size: 0.5rem;
+    margin-right:31px;
+  }
+  .back{
+    width: 41px;
+    height: 11px;
+    border-radius: 3px;
+    font-size: 10.5px;
+  }
+  .menu{
+    background-image: url('../htmls/imgs/menu2.svg');
+    margin-left: 14px;
+    margin-right: 41px;
+    width: 30px;
+    height: 15.5px;
+  }
+  .testbar{
+    width: 339px;
+    height: 10px;
+  }
+  .testball {
+    width: 30px;
+    height: 30px;
+  }
+  .container{
+    margin-left: 7em;
+  }
+  .titleu{
+    font-size: 20px;
+    padding-top: 129px;
+  }
+  .logo{
+    background-image: url('../htmls/imgs/nm4.svg');
+    width: 225px;
+    height: 56px;
+    animation: fadein2 2s ease;
+  }
+  .titled{
+    margin-top: -16px;
+    font-size: 20px;
+  }
+  .logot{
+    margin-top: 0px;
+  }
+  .bar6{
+    width: 339px;
+    height: 10px;
+    padding-top: 142px;
+    background-image: url(../htmls/imgs/bar7.svg);
+    margin-left: 0px;
+    background-position: center
+  }
+  .test{
+    margin-left: 16px;
+    width: 189px;
+    height: 59px;
+    box-shadow: 15px 15px 15px 0 rgb(0 0 0 / 16%);
+    background-color: #ffffff;
+    border-bottom-right-radius: 3em;
+    border-bottom-left-radius: 3em;
+    cursor: pointer;
+  }
+  .test .title1{
+    margin-left: 24.7px;
+    font-size: 20px;
+    text-shadow: 2px 0 0 rgb(0 0 0 / 16%);
+  }
+  .test .title2{
+    font-size: 15px;
+    text-shadow: 2px 0 0 rgb(0 0 0 / 16%);
+  }
+  .info{
+    margin-left: 21.7px;
+    font-size:10px;
+    width:159px;
+    height: 0px;
+  }
+  .bar1{
+    background-image: url('../htmls/imgs/bar1.svg');
+    height: 59px;
+    width: 8px;
+  }
+  .bar2{
+    background-image: url('../htmls/imgs/bar2.svg');
+    height: 59px;
+    width: 8px;
+  }
+  .bar3{
+    background-image: url('../htmls/imgs/bar3.svg');
+    height: 59px;
+    width: 8px;
+  }
+  
+  .bar4{
+    margin-left: 24.7px;
+    width: 150px;
+    height: 9.5px;
+  }
+  .bar5{
+    width: 339px;
+    height: 10px;
+    padding-top: 23px;
+    margin-left: 0px;
+    background-image: url('../htmls/imgs/bar7.svg');
+    background-position: center
+  }
+  .textcontent{
+    height: 350px;
+    padding-top: 0px;
+    margin-top: -2px;
+  }
+  .content{
+    margin-bottom: 38px;
+  }
+  .logo1{
+    background-image: url('../htmls/imgs/logo1.svg');
+      width: 47.2px;
+      height: 15px;
+      margin-left: 152px;
+      margin-top: 0px;
+      cursor: pointer; 
+  }
+  .calc{
+    background-image: url('../htmls/imgs/cal2.svg');
+    width: 40px;
+    height: 53px;
+    margin-left: 146px;
+    margin-top: 0px;
+    cursor: pointer; 
+  }
+  .word{
+    background-image: url('../htmls/imgs/word2.svg');
+    width: 46.57px;
+    height: 41.18px;
+    margin-left: 146px;
+    margin-top: 0px;
+    cursor: pointer; 
+  }
+  .logou{
+    width: 150px;
+    height: 0.18px;
+    background-image: url('../htmls/imgs/about2.svg');
+    padding-top: 48px;
+    margin-top: 0px;
+  }
+  .logon{
+    font-size: 40px;
+    width: 246px;
+    height: 98px;
+    margin: 14px 427px 0px
+  }
+  .about .infoi{
+    font-size: 20px;
+  }
+  .about{
+    height: 299px;
+  }
+  .copyright{
+    font-size: 20px;
+  }
+  .switch{
+    width: 50px;
+    height: 17px;
+    font-size: 10px;
+    border-radius: 5px
+  }
+  .mail{
+    background-image: url('../htmls/imgs/mail2.svg');
+    width: 15px;
+    height: 10px;
+  }
+  .maill{
+    font-size: 8px;
+  }
+}
 
 @keyframes fadein {
   0% {opacity: 0;}
