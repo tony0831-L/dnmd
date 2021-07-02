@@ -526,9 +526,11 @@ table {
   .test .title1{
     margin-left: 24.7px;
     font-size: 20px;
+    text-shadow: 2px 0 0 rgb(0 0 0 / 16%);
   }
   .test .title2{
     font-size: 15px;
+    text-shadow: 2px 0 0 rgb(0 0 0 / 16%);
   }
   .info{
     margin-left: 21.7px;
