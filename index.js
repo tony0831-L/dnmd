@@ -9,7 +9,11 @@ app.get("/", function(req, res) {
         if (err) res.send(404);
     });
 });
-
+app.get("/index2.html", function(req, res) {
+    res.sendfile(__dirname + '/index2.html', function(err) {
+        if (err) res.send(404);
+    });
+});
 
 port = process.env.PORT || 3000;
 app.listen(port, function() {

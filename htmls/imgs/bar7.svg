@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="357" height="28" viewBox="0 0 357 28">
+  <defs>
+    <filter id="直线_4" x="5.375" y="4.533" width="347" height="23" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_24" x="0" y="0" width="28" height="28" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_25" x="329" y="0" width="28" height="28" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="组_49" data-name="组 49" transform="translate(-70 -3238)">
+    <g transform="matrix(1, 0, 0, 1, 70, 3238)" filter="url(#直线_4)">
+      <line id="直线_4-2" data-name="直线 4" x2="329" transform="translate(14.37 11.03)" fill="none" stroke="#707070" stroke-width="5"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 70, 3238)" filter="url(#椭圆_24)">
+      <g id="椭圆_24-2" data-name="椭圆 24" transform="translate(9 6)" fill="#707070" stroke="#707070" stroke-width="1">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4.5" fill="none"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 70, 3238)" filter="url(#椭圆_25)">
+      <g id="椭圆_25-2" data-name="椭圆 25" transform="translate(338 6)" fill="#707070" stroke="#707070" stroke-width="1">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
