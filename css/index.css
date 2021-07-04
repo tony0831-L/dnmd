@@ -479,9 +479,9 @@ audio{
 }
 .search{
   background-image: url("../htmls/imgs/search.svg");
-  width: 102px;
-  height: 76px;
-  margin-right: 27.2px;
+  width: 94px;
+  height: 73px;
+  margin-left: 27.2px;
   cursor: pointer; 
 }
 .url{
@@ -720,9 +720,9 @@ audio{
   }
   .search{
     background-image: url("../htmls/imgs/searchs.svg");
-    width: 37.22px;
-    height: 27.84px;
-    margin-right: 4.6px;
+    width: 34px;
+    height: 28.84px;
+    margin-left: 4.6px;
     cursor: pointer; 
   }
   .url{
