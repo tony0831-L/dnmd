@@ -1,5 +1,6 @@
 let sumb=document.querySelector('.search')
 let video=document.querySelector('.vi')
+let audio=document.querySelector('.ai')
 let videotilte=document.querySelector('.videotilte')
 sumb.addEventListener('click',(e)=>{
     var url=document.querySelector('.url').value
@@ -11,12 +12,18 @@ sumb.addEventListener('click',(e)=>{
     xhr.send(link)
     xhr.onload=()=>{
         link=xhr.response
-        link=link.split(',')
-        let title="標題:"+link[1]+"\n"
-        title+="畫質:"+link[2]
-        videotilte.textContent=title
-        str="<video controls  preload=”auto” class='video'><source src="+link[0]+" type='audio/mpeg' auto;'></video>"
-        video.innerHTML=str
+        if(link!=""){
+            link=link.split(',')
+            let title="標題:"+link[1]+"\n"
+            title+="畫質:"+link[2]
+            videotilte.textContent=title
+            str="<video controls  preload=”auto” class='video'><source src="+link[0]+" type='audio/mpeg' auto;'></video>"
+            au="<audio controls  preload=”auto” ><source src="+link[3]+" ' auto;'></video>"
+            video.innerHTML=str
+            audio.innerHTML=au
+        }else{
+            videotilte.textContent="抱歉目前無法支持這部影片"
+        }
     }
 },false)
 if(window.innerHeight>707){

@@ -47,7 +47,11 @@ table {
   color: #faeefb;
 }
 
-
+audio{
+  height: 48px;
+  width: 1000px;
+  margin-bottom: 15px;
+}
 
 .content{
   display: flex;
@@ -494,6 +498,7 @@ table {
   font-size: 43px;
   font-family: Source Han Sans TW;
   margin-bottom: 50px;
+  text-align: center;
 }
 .video{
   width: 1280px;
@@ -504,6 +509,11 @@ table {
 
 
 @media screen and (max-width: 480px) {
+  audio{
+    width: 254px;
+    height: 19px;
+    margin-bottom: 8px;
+  }
   .banner{
     background-image: url('../htmls/imgs/nm5.svg');
     height: 350px;
