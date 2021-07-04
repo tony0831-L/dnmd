@@ -34,3 +34,10 @@ if(window.innerHeight>707){
     console.log(str)
     document.querySelector('.heightbox').innerHTML=str
 }
+if(window.innerWidth>408){
+    var abour=document.querySelector('.cti')
+    var about=document.createElement('div')
+    about.setAttribute('class','title')
+    about.innerHTML='<a href="#">關於我們</a>'
+    abour.appendChild(about)
+}

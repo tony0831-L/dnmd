@@ -103,6 +103,7 @@ audio{
   display: flex;
   position:absolute;
   right: 0px;
+  top: 10px;
   width: 160px;
   height: 60px;
   text-align: center;
@@ -536,6 +537,7 @@ audio{
     margin-right:31px;
   }
   .back{
+    top:2px;
     width: 41px;
     height: 11px;
     border-radius: 3px;
@@ -544,7 +546,7 @@ audio{
   .menu{
     background-image: url('../htmls/imgs/menu2.svg');
     margin-left: 14px;
-    margin-right: 41px;
+    margin-right: 3px;
     width: 30px;
     height: 15.5px;
   }
