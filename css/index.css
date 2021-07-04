@@ -690,7 +690,7 @@ table {
   .contents{
     width: 342px;
     height: 36.18px;
-    margin-bottom: 8px;
+    margin-bottom: 31px;
     margin-top: -8px;
   }
   .search{
@@ -713,13 +713,13 @@ table {
   .videotilte{
     font-size: 15px;
     font-family: Source Han Sans TW;
-    margin-bottom: 8px;
+    margin-bottom: 31px;
   }
   .video{
     width: 340px;
     height: 160px;
     overflow: auto;
-    margin-bottom: 8px;
+    margin-bottom: 31px;
   }
 }
 
