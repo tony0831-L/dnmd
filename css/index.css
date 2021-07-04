@@ -91,7 +91,7 @@ audio{
 .header .title{
   margin-right:145px;
   font-family: Source Han Sans TW;
-  font-size: 47px;
+  font-size: 38px;
   color: #faeefb;
 }
 .back{
@@ -105,7 +105,7 @@ audio{
   align-items: center;
   justify-content: center;
   font-family: SourceHanSerifTC;
-  font-size: 47px;
+  font-size: 38px;
   color: #ffffff;
   cursor: pointer; 
 }
