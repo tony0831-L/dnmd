@@ -29,11 +29,10 @@ for(let i=0;i<code.length;i++){
     word[i].addEventListener('mouseout',test2,true)
 }
 for(let i=0;i<code.length;i++){
-    code[i].addEventListener('click',test,true)
-    calc[i].addEventListener('click',test,true)
-    word[i].addEventListener('click',test,true)
+    code[i].addEventListener('click',test5,true)
+    calc[i].addEventListener('click',test5,true)
+    word[i].addEventListener('click',test5,true)
 }
-
 
 
 function test(e){
@@ -63,17 +62,11 @@ function test3(e){
 function test4(e){
     e.target.style.backgroundColor=''
 }
+
 function test5(e){
     let name=e.target.parentNode.id
-    switch (name){
-        case '1':
-            break;
-        case '2':
-            window.location.href='./htmls/math.html'
-            break;
-        case '3':
-            window.location.href='./htmls/word.html'
-            break;
+    console.log("name:"+name)
+    if(name=="1"){
+        window.location.href="./ytdl.html"
     }
-
 }
