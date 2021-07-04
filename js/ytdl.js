@@ -18,7 +18,7 @@ sumb.addEventListener('click',(e)=>{
             title+="畫質:"+link[2]
             videotilte.textContent=title
             str="<video controls  preload=”auto” class='video'><source src="+link[0]+" type='audio/mpeg' auto;'></video>"
-            au="<audio controls  preload=”auto” ><source src="+link[3]+" ' auto;'></video>"
+            //au="<audio controls  preload=”auto” ><source src="+link[3]+" ' auto;'></video>"
             video.innerHTML=str
             audio.innerHTML=au
         }else{
