@@ -12,7 +12,7 @@ sumb.addEventListener('click',(e)=>{
     xhr.send(link)
     xhr.onload=()=>{
         link=xhr.response
-        if(link!=""){
+        if(xhr.status!=503){
             link=link.split(',')
             let title="標題:"+link[1]+"\n"
             title+="畫質:"+link[2]
