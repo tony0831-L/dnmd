@@ -88,7 +88,12 @@ audio{
   margin-left: 51px;
   margin-right: 293px;
 }
-.header .title{
+.cti{
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+}
+.cti .title{
   margin-right:145px;
   font-family: Source Han Sans TW;
   font-size: 38px;
@@ -96,6 +101,8 @@ audio{
 }
 .back{
   display: flex;
+  position:absolute;
+  right: 0px;
   width: 160px;
   height: 60px;
   text-align: center;
@@ -465,7 +472,6 @@ audio{
 .menu{
   background-image: url('../htmls/imgs/menu.svg');
   margin-left: 14px;
-  margin-right: 293px;
   width: 69px;
   height: 33px;
 }
@@ -525,7 +531,7 @@ audio{
   .header{
     height: 21px;
   }
-  .header .title{
+  .cti .title{
     font-size: 0.6rem;
     margin-right:31px;
   }
