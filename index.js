@@ -15,26 +15,30 @@ app.get("/", function(req, res) {
 });
 app.post('/ytdl',function(req,res){
     let url=req.body.url
+    let m4a=''
     ytdl.getInfo(url).then((info)=>{
         try{
             url=(ytdl.chooseFormat(info.formats,{ quality: '37' }).url)
+            m4a=(ytdl.chooseFormat(info.formats,{ quality: '140' }).url)
             let title=(info.videoDetails.title)
             let p='1080p\n'
-            let data=url+","+title+","+p
+            let data=url+","+title+","+p+","+m4a
             res.send(data)
         }catch(err){
             try{
                 url=(ytdl.chooseFormat(info.formats,{ quality: '22' }).url)
+                m4a=(ytdl.chooseFormat(info.formats,{ quality: '140' }).url)
                 let title=(info.videoDetails.title)
                 let p='720p\n'
-                let data=url+","+title+","+p
+                let data=url+","+title+","+p+","+m4a
                 res.send(data)
             }catch(err){
                 try{
                     url=(ytdl.chooseFormat(info.formats,{ quality: '18' }).url)
+                    m4a=(ytdl.chooseFormat(info.formats,{ quality: '140' }).url)
                     let title=(info.videoDetails.title)
                     let p='360p\n'
-                    let data=url+","+title+","+p
+                    let data=url+","+title+","+p+","+m4a
                     res.send(data)
                 }catch(err){
                     let data=("不符合的影片")
