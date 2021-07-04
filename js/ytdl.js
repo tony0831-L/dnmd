@@ -10,6 +10,7 @@ sumb.addEventListener('click',(e)=>{
     let link='url='
     link+=url
     xhr.send(link)
+    videotilte.textContent="尋找影片中"
     xhr.onload=()=>{
         link=xhr.response
         if(xhr.status!=503){
