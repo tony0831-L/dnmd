@@ -7,7 +7,8 @@
     "body-parser": "^1.19.0",
     "connect": "^3.7.0",
     "express": "^3.0.0",
-    "http": "^0.0.1-security"
+    "http": "^0.0.1-security",
+    "ytdl-core": "^4.8.3"
   },
   "devDependencies": {},
   "scripts": {
