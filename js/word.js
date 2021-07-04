@@ -39,8 +39,6 @@ function test(e){
     let ta=e.target.parentNode
     if(ta.className!="textcontent"){
         ta.style.backgroundColor='#D7D7D7'
-        console.log("")
-        console.log(ta.className)
     }
 }
 function test2(e){
@@ -49,9 +47,7 @@ function test2(e){
         ta.style.backgroundColor=''
     }else if(ta.className!="test"){
         ta.parentNode.style.backgroundColor=''
-        console.log(ta.className)
     }else if(ta.className="textcontent"){
-        console.log("nmsl")
     }
 }
 
@@ -65,8 +61,13 @@ function test4(e){
 
 function test5(e){
     let name=e.target.parentNode.id
-    console.log("name:"+name)
     if(name=="1"){
         window.location.href="./ytdl.html"
     }
+}
+if(window.innerHeight>707){
+    height=window.innerHeight
+    height=height-707
+    let str='<div style="height:'+height+'px"></div>'
+    document.querySelector('.heightbox').innerHTML=str
 }

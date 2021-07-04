@@ -19,3 +19,11 @@ sumb.addEventListener('click',(e)=>{
         video.innerHTML=str
     }
 },false)
+if(window.innerHeight>707){
+    height=window.innerHeight
+    height=height-707
+    console.log(height)
+    let str='<div style="height:'+height+'px"></div>'
+    console.log(str)
+    document.querySelector('.heightbox').innerHTML=str
+}

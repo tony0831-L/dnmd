@@ -40,8 +40,6 @@ function test(e){
     let ta=e.target.parentNode
     if(ta.className!="textcontent"){
         ta.style.backgroundColor='#D7D7D7'
-        console.log("")
-        console.log(ta.className)
     }
 }
 function test2(e){
@@ -50,9 +48,7 @@ function test2(e){
         ta.style.backgroundColor=''
     }else if(ta.className!="test"){
         ta.parentNode.style.backgroundColor=''
-        console.log(ta.className)
     }else if(ta.className="textcontent"){
-        console.log("nmsl")
     }
 }
 
