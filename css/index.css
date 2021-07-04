@@ -149,6 +149,15 @@ table {
   height: 167px;
   animation: fadein2 2s ease;
 }
+.logom{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-image: url('../htmls/imgs/logom.svg');
+  width: 900px;
+  height: 167px;
+  animation: fadein2 2s ease;
+}
 .logoa{
   margin-top: -186px;
   margin-left: 585px;
@@ -546,6 +555,12 @@ table {
   }
   .logow{
     background-image: url('../htmls/imgs/logows.svg');
+    width: 225px;
+    height: 56px;
+    animation: fadein2 2s ease;
+  }
+  .logom{
+    background-image: url('../htmls/imgs/logoms.svg');
     width: 225px;
     height: 56px;
     animation: fadein2 2s ease;

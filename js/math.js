@@ -65,3 +65,9 @@ function test5(e){
         window.location.href="./index.html"
     }
 }
+if(window.innerHeight>707){
+    height=window.innerHeight
+    height=height-707
+    let str='<div style="height:'+height+'px"></div>'
+    document.querySelector('.heightbox').innerHTML=str
+}
