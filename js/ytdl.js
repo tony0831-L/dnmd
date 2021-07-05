@@ -24,7 +24,7 @@ sumb.addEventListener('click',(e)=>{
             video.innerHTML=str
             audio.innerHTML=au
         }else if(link=="err"){
-            videotilte.textContent="抱歉目前無法支持這部影片"
+            videotilte.innerHTML="<div style='color:#333;'>抱歉目前無法支持這部影片</div>"
         }
     }
 },false)

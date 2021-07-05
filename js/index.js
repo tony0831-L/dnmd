@@ -73,6 +73,7 @@ function test5(e){
     }
 
 }
+
 if(window.innerWidth>408){
     var abour=document.querySelector('.cti')
     var about=document.createElement('div')
