@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     width: 100%;
     line-height: 1;
+    text-align: center;
 }
 ol, ul {
     list-style: none;
@@ -66,10 +67,10 @@ audio{
 
 }
 .banner{
+  background-color: #A3A1A1;
+  display: inline-block;
   margin-top: -128px;
   width: 100%;
-  max-width: 1920px;
-  background-size: cover;
   background-position: center top;
   background-repeat: no-repeat; 
   background-image: url('../htmls/imgs/banner1.png');
@@ -299,7 +300,7 @@ audio{
   background-repeat: no-repeat; 
   background-image: url('../htmls/imgs/bar5.svg');
   padding-top:181px;
-  margin-left: 94px;
+  display: inline-block;
 }
 .info {
   margin-left: 36.7px;
