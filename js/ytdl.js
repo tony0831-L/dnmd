@@ -1,7 +1,7 @@
 let sumb=document.querySelector('.search')
 let video=document.querySelector('.vi')
 let audio=document.querySelector('.ai')
-let videotilte=document.querySelector('.videotilte')
+let videotilte=document.querySelector('.videotilte a')
 sumb.addEventListener('click',(e)=>{
     var url=document.querySelector('.url').value
     var xhr=new XMLHttpRequest()
@@ -13,16 +13,17 @@ sumb.addEventListener('click',(e)=>{
     videotilte.textContent="尋找影片中"
     xhr.onload=()=>{
         link=xhr.response
-        if(xhr.status!=503){
-            link=link.split(',')
-            let title="標題:"+link[1]+"\n"
-            title+="畫質:"+link[2]
+        if(xhr.response!="err"){
+            link=JSON.parse(link)
+            let title="標題:"+link.title+"\n"
+            title+="最高畫質:"+link.video_quality
             videotilte.textContent=title
-            str="<video controls  preload=”auto” class='video'><source src="+link[0]+" type='audio/mpeg' auto;'></video>"
-            au="<audio controls  preload=”auto” ><source src="+link[3]+" ' auto;'></video>"
+            videotilte.setAttribute('href',link.video_url)
+            str="<video controls  preload=”auto” class='video'><source src="+link.hightest_url+" type='audio/mpeg' auto;'></video>"
+            au="<audio controls  preload=”auto” ><source src="+link.audio_url+" ' auto;'></video>"
             video.innerHTML=str
             audio.innerHTML=au
-        }else{
+        }else if(link=="err"){
             videotilte.textContent="抱歉目前無法支持這部影片"
         }
     }
@@ -30,9 +31,7 @@ sumb.addEventListener('click',(e)=>{
 if(window.innerHeight>707){
     height=window.innerHeight
     height=height-707
-    console.log(height)
     let str='<div style="height:'+height+'px"></div>'
-    console.log(str)
     document.querySelector('.heightbox').innerHTML=str
 }
 if(window.innerWidth>408){

@@ -14,44 +14,45 @@ app.get("/", function(req, res) {
     });
 });
 app.post('/ytdl',function(req,res){
-    let url=req.body.url
-    let m4a=''
-    ytdl.getInfo(url).then((info)=>{
-        try{
-            url=(ytdl.chooseFormat(info.formats,{ quality: '37' }).url)
-            m4a=(ytdl.chooseFormat(info.formats,{ quality: '140' }).url)
-            let title=(info.videoDetails.title)
-            let p='1080p\n'
-            let data=url+","+title+","+p+","+m4a
-            res.send(data)
-        }catch(err){
-            try{
-                url=(ytdl.chooseFormat(info.formats,{ quality: '22' }).url)
-                m4a=(ytdl.chooseFormat(info.formats,{ quality: '140' }).url)
-                let title=(info.videoDetails.title)
-                let p='720p\n'
-                let data=url+","+title+","+p+","+m4a
-                res.send(data)
-            }catch(err){
-                try{
-                    url=(ytdl.chooseFormat(info.formats,{ quality: '18' }).url)
-                    m4a=(ytdl.chooseFormat(info.formats,{ quality: '140' }).url)
-                    let title=(info.videoDetails.title)
-                    let p='360p\n'
-                    let data=url+","+title+","+p+","+m4a
-                    res.send(data)
-                }catch(err){
-                    let data=("不符合的影片")
-                    res.send(data)
-                    throw err
-                }
+    let url=req.body.url,hurl,quality,y=0
+    if(ytdl.validateURL(url)==true){
+        ytdl.getInfo(url).then((info)=>{
+            (info.formats).forEach((e)=>{if((e.hasAudio==true)&&(e.hasVideo==true)){if(y<e.itag){hurl=e.url;quality=e.qualityLabel}}})
+            let data={
+                "title":info.videoDetails.title,
+                "video_url":ytdl.chooseFormat(info.formats,{ quality: 'highestvideo' }).url,
+                "video_quality":ytdl.chooseFormat(info.formats,{ quality: 'highestvideo' }).qualityLabel,
+                "audio_url":ytdl.chooseFormat(info.formats,{ quality: 'highestaudio' }).url,
+                "hightest_url":hurl,
+                "hightest_quality":quality
             }
-        }
-    })
-
+            data=JSON.stringify(data)
+            res.send(data)
+        })
+    }else{
+        res.send("err")
+    }
 })
 
 port = process.env.PORT || 3000;
 app.listen(port, function() {
     console.log("Listening on " + port);
 });
+// try{
+//     ytdl.getInfo(url).then((info)=>{
+//         (info.formats).forEach((e)=>{if((e.hasAudio==true)&&(e.hasVideo==true)){if(y<e.itag){hurl=e.url;quality=e.qualityLabel}}})
+//         let data={
+//             "title":info.videoDetails.title,
+//             "video_url":ytdl.chooseFormat(info.formats,{ quality: 'highestvideo' }).url,
+//             "video_quality":ytdl.chooseFormat(info.formats,{ quality: 'highestvideo' }).qualityLabel,
+//             "audio_url":ytdl.chooseFormat(info.formats,{ quality: 'highestaudio' }).url,
+//             "hightest_url":hurl,
+//             "hightest_quality":quality
+//         }
+//         data=JSON.stringify(data)
+//         res.send(data)
+//     })
+// }catch(err){
+//     res.send("err")
+//     throw err
+// }
