@@ -43,6 +43,7 @@ app.post('/ytdl',function(req,res){
                 }catch(err){
                     let data=("不符合的影片")
                     res.send(data)
+                    throw err
                 }
             }
         }
