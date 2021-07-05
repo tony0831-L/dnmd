@@ -234,6 +234,7 @@ audio{
   background-image: linear-gradient(#A3A1A1, #fdfbfb);
 }
 .test{
+  text-align: left;
   margin-left: 22px;
   width: 853.33px;
   height: 192.5px;
