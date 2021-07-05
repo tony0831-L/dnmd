@@ -8,6 +8,7 @@
     "connect": "^3.7.0",
     "express": "^3.21.2",
     "http": "^0.0.1-security",
+    "promise": "^8.1.0",
     "ytdl-core": "^4.8.3"
   },
   "devDependencies": {},
