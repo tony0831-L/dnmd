@@ -13,6 +13,12 @@ app.get("/", function(req, res) {
         if (err) res.send(404);
     });
 });
+app.get("/google8f4ee59b5c3fdfb9.html", function(req, res) {
+    res.sendfile(__dirname + '/google8f4ee59b5c3fdfb9.html', function(err) {
+        if (err) res.send(404);
+    });
+});
+
 app.post('/ytdl',function(req,res){
     let url=req.body.url,hurl,quality,y=0
     if(ytdl.validateURL(url)==true){
