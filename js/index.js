@@ -1,6 +1,7 @@
 var code=document.getElementsByName('codenote')
 var calc=document.getElementsByName('calc')
 var word=document.getElementsByName('word')
+var sw=document.querySelector('.switch')
 
 var c1=document.getElementById('1')
 var c2=document.getElementById('2')
@@ -103,3 +104,12 @@ window.onresize=()=>{
         document.body.style.zoom=0.75
     }
 }
+var sw=document.querySelector('.switch')
+sw.addEventListener('click',(e)=>{
+    let lcss=(location.href)+"css/index.css"
+    if((document.getElementById('css').href)==lcss){
+        document.getElementById('css').href="css/title2.css"
+    }else{
+        document.getElementById('css').href="css/index.css"
+    }
+},false)

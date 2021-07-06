@@ -103,3 +103,12 @@ if(window.innerWidth>480){
         }
     }
 }
+document.querySelector('.switch').addEventListener('click',(e)=>{
+    let lcss=(location.href).replace(location.pathname,"")+"/css/index.css"
+    if((document.getElementById('css').href)==lcss){
+        document.getElementById('css').href="../css/title2.css"
+    }else{
+        console.log(document.getElementById('css').href)
+        document.getElementById('css').href="../css/index.css"
+    }
+},false)

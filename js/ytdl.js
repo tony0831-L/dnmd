@@ -41,3 +41,11 @@ if(window.innerWidth>408){
     about.innerHTML='<a href="#">關於我們</a>'
     abour.appendChild(about)
 }
+document.querySelector('.switch').addEventListener('click',(e)=>{
+    let lcss=(location.href).replace(location.pathname,"")+"/css/index.css"
+    if((document.getElementById('css').href)==lcss){
+        document.getElementById('css').href="../css/title2.css"
+    }else{
+        document.getElementById('css').href="../css/index.css"
+    }
+},false)
