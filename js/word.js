@@ -81,24 +81,18 @@ if(window.innerWidth>408){
 }
 if(window.innerWidth>480){
     if(window.innerWidth>480&&window.innerWidth<700){
-        console.log(1)
         document.body.style.zoom=0.25
     }else if(window.innerWidth>700&&window.innerWidth<1024){
-        console.log(2)
         document.body.style.zoom=0.5
     }else{
-        console.log(3)
         document.body.style.zoom=0.75
     }
     window.onresize=()=>{
         if(window.innerWidth>480&&window.innerWidth<700){
-            console.log(1)
             document.body.style.zoom=0.25
         }else if(window.innerWidth>700&&window.innerWidth<1024){
-            console.log(2)
             document.body.style.zoom=0.5
         }else{
-            console.log(3)
             document.body.style.zoom=0.75
         }
     }
